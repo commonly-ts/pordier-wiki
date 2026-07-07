@@ -1,0 +1,18 @@
+title: Pordier at War Wiki
+description: Simple publically-readable wiki maintained by trusted users for Pordier at War by Ordnance Games on Roblox.
+theme: jekyll-theme-printer
+
+collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
+wiki_categories:
+  - name: "Maps"
+    slug: "maps"
+  - name: "Classes"
+    slug: "classes"
+  - name: "Factions"
+    slug: "factions"
+  - name: "Game Mechanics"
+    slug: "game-mechanics"

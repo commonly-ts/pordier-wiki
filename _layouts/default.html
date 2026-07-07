@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{{ page.title }} | {{ site.title }}</title>
+		<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+	</head>
+
+	<body>
+		<h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+		<p>{{ site.description }}</p>
+		<hr />
+
+		<div style="display: flex; gap: 40px">
+			<aside style="width: 250px">
+				<h3>Categories</h3>
+				{% for category in site.wiki_categories %}
+				<h4>{{ category.name }}</h4>
+				<ul>
+					{% assign category_pages = site.wiki | where: "category",
+					category.slug %} {% for item in category_pages %}
+					<li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+					{% endfor %}
+				</ul>
+				{% endfor %}
+			</aside>
+
+			<main style="flex: 1">
+				<h2>{{ page.title }}</h2>
+				{{ content }}
+			</main>
+		</div>
+	</body>
+</html>

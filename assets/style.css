@@ -1,0 +1,52 @@
+.wiki-infobox {
+	float: right;
+	width: 300px;
+	background-color: #f8f9fa;
+	border: 1px solid #a2a9b1;
+	border-collapse: collapse;
+	margin: 0 0 1em 1em;
+	font-size: 85%;
+	font-family: sans-serif;
+	color: #202122;
+}
+
+.wiki-infobox th.infobox-title {
+	font-size: 125%;
+	font-weight: bold;
+	background-color: #eaecf0;
+	text-align: center;
+	padding: 0.4em;
+}
+
+.wiki-infobox td.infobox-image {
+	text-align: center;
+	padding: 0.5em;
+	background: #fff;
+}
+
+.wiki-infobox td.infobox-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wiki-infobox th.infobox-section {
+	background-color: #eaecf0;
+	text-align: center;
+	font-weight: bold;
+	padding: 0.2em;
+}
+
+.wiki-infobox th.infobox-abel {
+	width: 40%;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	padding: 0.4em 0.6em;
+	border-top: 1px solid #a2a9b1;
+}
+
+.wiki-infobox td.infobox-data {
+	vertical-align: top;
+	padding: 0.4em 0.6em;
+	border-top: 1px solid #a2a9b1;
+}
