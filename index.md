@@ -1,8 +1,6 @@
 ---
 layout: default
-title: Welcome to the Wiki
+title: Welcome
 ---
 
-Use the sidebar to navigate through the wiki.
-
-hi
+Simple publically-readable wiki maintained by trusted users for Pordier at War by Ordnance Games on Roblox.
