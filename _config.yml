@@ -1,11 +1,11 @@
 title: Pordier at War Wiki
-description: Simple publically-readable wiki maintained by trusted users for Pordier at War by Ordnance Games on Roblox.
+description: Semi-official Wiki focused on the Facts
 theme: jekyll-theme-primer
 
 collections:
   wiki:
     output: true
-    permalink: /wiki/:path/
+    permalink: /:path/
 
 wiki_categories:
   - name: "Maps"
