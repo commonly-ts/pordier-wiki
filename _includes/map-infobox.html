@@ -1,0 +1,29 @@
+<table class="wiki-infobox">
+	<tr>
+		<th colspan="2" class="infobox-title">{{ include.title }}</th>
+	</tr>
+	<tr>
+		<td colspan="2" class="infobox-image">
+			<img
+				src="{{ include.overview_image | relative_url }}"
+				alt="Map Generation"
+			/>
+			<i>Example map generation</i>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2" class="infobox-section">Overview</th>
+	</tr>
+	<tr>
+		<th class="infobox-label">Belligerents</th>
+		<td class="infobox-data">{{ include.belligerents }}</td>
+	</tr>
+	<tr>
+		<th class="infobox-label">No. of Flags</th>
+		<td class="infobox-data">{{ include.flag_count }}</td>
+	</tr>
+	<tr>
+		<th class="infobox-label">Year</th>
+		<td class="infobox-data">{{ include.year }}</td>
+	</tr>
+</table>
