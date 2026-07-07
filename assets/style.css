@@ -240,3 +240,59 @@ table.wiki-infobox {
 	font-size: 0.8rem;
 	color: #54595d;
 }
+
+/* --- Universal Table Builder Styling --- */
+.universal-table-wrapper {
+	display: block;
+	width: max-content;
+	max-width: 100%;
+	overflow-x: auto;
+	margin: 20px 0;
+	border: 1px solid var(--border-color);
+	border-radius: 6px;
+}
+
+table.universal-table {
+	width: auto;
+	max-width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+}
+
+.universal-table th,
+.universal-table td {
+	padding: 10px 16px;
+	border-bottom: 1px solid var(--border-color);
+	white-space: normal;
+	word-break: break-word;
+}
+
+.universal-table tbody tr:nth-child(even) {
+	background-color: var(--sidebar-bg);
+}
+
+.universal-table tbody tr:hover {
+	background-color: #f0f3f6;
+}
+
+.table-error-msg {
+	color: #cf222e;
+	background-color: #ffebe9;
+	padding: 12px;
+	border-radius: 6px;
+	border: 1px solid #ffc1c0;
+	margin: 20px 0;
+}
+
+.table-split-row {
+	display: flex;
+	gap: 1.5rem;
+	align-items: flex-start;
+}
+
+.table-split-row > div {
+	flex: 1;
+	min-width: 0; /* Prevents tables from blowing out the container width */
+}

@@ -1,0 +1,27 @@
+{% if include.data %} {% assign table_parts = include.data | split: "::" %} {%
+assign headers = table_parts[0] | split: "|" %} {% assign rows_string =
+table_parts[1] %} {% assign rows = rows_string | split: "," %}
+
+<div class="universal-table-wrapper">
+	<table class="universal-table">
+		<thead>
+			<tr>
+				{% for header in headers %}
+				<th>{{ header | strip }}</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in rows %}
+			<tr>
+				{% assign cells = row | split: "|" %} {% for cell in cells %}
+				<td>{{ cell | strip | markdownify }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<p class="table-error-msg">Error: No data passed to the table builder.</p>
+{% endif %}
