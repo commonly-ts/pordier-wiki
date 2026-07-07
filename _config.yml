@@ -1,6 +1,6 @@
 title: Pordier at War Wiki
 description: Simple publically-readable wiki maintained by trusted users for Pordier at War by Ordnance Games on Roblox.
-theme: jekyll-theme-printer
+theme: jekyll-theme-primer
 
 collections:
   wiki:
