@@ -1,0 +1,30 @@
+<table class="wiki-infobox">
+	<tr>
+		<th colspan="2" class="infobox-title">{{ include.title }}</th>
+	</tr>
+	<tr>
+		<td colspan="2" class="infobox-image">
+			<img src="{{ include.flag_image | relative_url }}" alt="Faction Flag" />
+			<i>{{ include.demonym }} Flag</i>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2" class="infobox-section">Overview</th>
+	</tr>
+	<tr>
+		<th class="infobox-label">Demonym</th>
+		<td class="infobox-data">{{ include.demonym }}</td>
+	</tr>
+	<tr>
+		<th class="infobox-label">Flavor Text</th>
+		<td class="infobox-data">{{ include.flavortext }}</td>
+	</tr>
+	<tr>
+		<th class="infobox-label">Faction Color</th>
+		<td class="infobox-data">{{ include.color }}</td>
+	</tr>
+	<tr>
+		<th class="infobox-label">Peoples</th>
+		<td class="infobox-data">{{ include.peoples }}</td>
+	</tr>
+</table>
