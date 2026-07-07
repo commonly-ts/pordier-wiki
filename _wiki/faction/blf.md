@@ -13,8 +13,8 @@ color="Purple"
 peoples="Bordenese, Albian"
 %}
 
-Borden is an nation in the continent of Pordier. The Bordenese Liberation Front (BLF) acts as the likely primary resistance to it's Oskovian occupiers. As seen in Pordier at War, the BLF use weapons from both Rostora and Oskovia, showing that they are unequipped and somewhat rely on support from Rostora.
+The Bordenese Liberation Front (BLF) is a non-conventional resistance force to Borden's Oskovian occupiers. As seen in Pordier at War, uses both Rostoran and Oskovian weapons. It is likely the Oskovian weapons are captured, and the Rostoran weapons are aid from Rostora as they are more common to spawn with.
 
 ## Uniforms
 
-They look grey yk
+They look brown yk
