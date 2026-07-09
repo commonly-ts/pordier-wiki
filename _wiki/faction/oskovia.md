@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Oskovia
-category: factions
+category: faction
 ---
 
 {%

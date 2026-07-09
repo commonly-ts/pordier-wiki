@@ -1,5 +1,5 @@
 title: Pordier at War Wiki
-description: Semi-official Wiki focused on the Facts
+description: Semi-Official Wiki
 theme: jekyll-theme-primer
 
 url: "https://pordier.wintercoat.nz"
@@ -12,10 +12,12 @@ collections:
 
 wiki_categories:
   - name: "Maps"
-    slug: "maps"
+    slug: "map"
   - name: "Classes"
-    slug: "classes"
+    slug: "class"
   - name: "Factions"
-    slug: "factions"
+    slug: "faction"
   - name: "Game Mechanics"
-    slug: "game-mechanics"
+    slug: "mechanic"
+  - name: "Strategies"
+    slug: "strategy"

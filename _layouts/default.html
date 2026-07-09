@@ -14,28 +14,62 @@
 			type="image/x-icon"
 			href="{{ '/assets/favicon.ico' | relative_url }}"
 		/>
+		<script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
 	</head>
 
 	<body>
 		<div class="header">
-			<h1>
-				<a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-			</h1>
-			<p>{{ site.description }}</p>
-			<hr />
+			<img
+				src="{{ '/assets/media/misc/screen01.png' | relative_url }}"
+				class="header-bg"
+				alt=""
+				loading="eager"
+			/>
+
+			<div class="header-content">
+				<h1>
+					<a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+				</h1>
+				<p>{{ site.description }}</p>
+				<hr />
+			</div>
 		</div>
 
 		<div style="display: flex; gap: 40px">
-			<aside style="width: 250px">
+			<aside>
 				<h3>Categories</h3>
-				{% for category in site.wiki_categories %}
-				<h4>{{ category.name }}</h4>
-				<ul>
-					{% assign category_pages = site.wiki | where: "category",
-					category.slug %} {% for item in category_pages %}
-					<li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-					{% endfor %}
-				</ul>
+
+				<div class="sidebar-search-container">
+					<input
+						type="text"
+						id="sidebar-search"
+						placeholder="Search pages..."
+						autocomplete="off"
+					/>
+				</div>
+
+				{% for category in site.wiki_categories %} {% assign category_pages =
+				site.wiki | where: "category", category.slug %} {% assign
+				is_current_category = false %} {% for item in category_pages %} {% if
+				item.url == page.url %} {% assign is_current_category = true %} {% endif
+				%} {% endfor %}
+
+				<div
+					class="sidebar-category {% if is_current_category %}is-open default-open{% endif %}"
+				>
+					<h4 class="category-title">
+						<span class="arrow">▶</span> {{ category.name }}
+					</h4>
+					<ul class="category-pages">
+						{% for item in category_pages %}
+						<li
+							class="sidebar-page-item {% if item.url == page.url %}active-page{% endif %}"
+						>
+							<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
 				{% endfor %}
 			</aside>
 
@@ -44,5 +78,10 @@
 				{{ content }}
 			</main>
 		</div>
+		<script
+			src="https://instant.page/5.2.0"
+			type="module"
+			integrity="sha384-N7SHe95YS7UrWTrpGBkgJaSBFrbtgl7QCUMOPMGiCST8cf0ypfWyOeaEE6CtWgeA"
+		></script>
 	</body>
 </html>

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Rostora
-category: factions
+category: faction
 ---
 
 {%

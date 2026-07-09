@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bordenese Liberation Front
-category: factions
+category: faction
 ---
 
 {%

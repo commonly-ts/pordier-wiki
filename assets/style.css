@@ -37,16 +37,39 @@ body {
 
 /* --- Header Banner --- */
 .header {
-	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-		url("/assets/media/misc/screen01.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	position: relative;
+	overflow: hidden;
 	color: white;
 	padding: 40px 20px;
 	text-align: center;
 	margin-bottom: 30px;
+}
+
+.header .header-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 1;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 2;
+}
+
+.header-content {
+	position: relative;
+	z-index: 3;
 }
 
 .header h1 a {
@@ -67,12 +90,14 @@ aside {
 	width: 260px;
 	flex-shrink: 0;
 	padding: 20px;
+	margin: 0px 0px 0px 15px;
 	background-color: var(--sidebar-bg);
 	border-radius: 6px;
 	border: 1px solid var(--border-color);
 	align-self: flex-start;
 	position: sticky;
 	top: 20px; /* Sticks to top when scrolling down long pages */
+	box-sizing: border-box;
 }
 
 aside h3 {
@@ -82,16 +107,63 @@ aside h3 {
 	padding-bottom: 5px;
 }
 
-aside h4 {
+/* Search Bar Styling */
+.sidebar-search-container {
+	margin-bottom: 15px;
+}
+
+.sidebar-search-container input {
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 0.9rem;
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	background-color: #ffffff; /* Adjust to match your theme if needed */
+	color: var(--text-color);
+	box-sizing: border-box;
+}
+
+.sidebar-search-container input:focus {
+	outline: none;
+	border-color: var(--accent-color, #57606a);
+}
+
+/* Category Dropdown Headers */
+aside h4.category-title {
 	font-size: 0.95rem;
 	color: #57606a;
 	margin: 15px 0 5px 0;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	user-select: none;
 }
 
-aside ul {
+aside h4.category-title:hover {
+	color: var(--accent-color, #000);
+}
+
+aside h4.category-title .arrow {
+	font-size: 0.7rem;
+	transition: transform 0.2s ease;
+	display: inline-block;
+}
+
+aside .sidebar-category .category-pages {
+	display: none;
 	list-style: none;
+	padding-left: 12px;
+}
+
+aside .sidebar-category.is-open .category-pages {
+	display: block;
+}
+
+aside .sidebar-category.is-open .arrow {
+	transform: rotate(90deg);
 }
 
 aside ul li {
@@ -110,6 +182,12 @@ aside ul li a {
 aside ul li a:hover {
 	background-color: #dee2e6;
 	color: var(--accent-color);
+}
+
+aside ul li.active-page a {
+	background-color: #dee2e6;
+	color: var(--accent-color, #000);
+	font-weight: 600;
 }
 
 /* --- Main Content Area --- */
@@ -294,5 +372,5 @@ table.universal-table {
 
 .table-split-row > div {
 	flex: 1;
-	min-width: 0; /* Prevents tables from blowing out the container width */
+	min-width: 0;
 }
